@@ -45,6 +45,15 @@ public class rndSqr {
         pos.y += dy;
         // Update the rotation angle.
         angle = (angle + rotationSpeed) % 360;
+
+        if (pos.x < 0) {
+            pos.x = 0;
+        }
+
+        // Ensure the fruit does not go beyond the right boundary
+        if (pos.x + size > screenWidth) {
+            pos.x = screenWidth - size;
+        }
     }
 
     public void draw(Canvas c) {

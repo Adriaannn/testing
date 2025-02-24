@@ -10,7 +10,7 @@ apply plugin: 'com.android.application'
 
 android {
   namespace "com.myTest.Test.android.android"
-  compileSdk 34
+  compileSdk 35
   sourceSets {
     main {
       manifest.srcFile 'AndroidManifest.xml'
@@ -31,7 +31,7 @@ android {
 		}
   }
   defaultConfig {
-    applicationId 'com.myTest.Test.android'
+    applicationId 'com.myTest.Test.android.android'
     minSdkVersion 26
     targetSdkVersion 34
     versionCode 1
@@ -60,6 +60,7 @@ configurations { natives }
 
 dependencies {
   implementation 'androidx.appcompat:appcompat:1.7.0'
+  implementation 'androidx.media3:media3-common:1.5.1'
   coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
   implementation "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
   implementation 'com.google.android.material:material:1.11.0' // Latest stable version
